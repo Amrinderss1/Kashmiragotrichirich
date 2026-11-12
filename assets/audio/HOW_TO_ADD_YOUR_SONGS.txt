@@ -1,0 +1,41 @@
+========================================================================
+HOW TO ADD YOUR WEDDING SONGS (Aaj Se Teri, Punjabi Wedding Song, etc.)
+========================================================================
+
+You can easily use any song you want!
+
+1. Download or copy your MP3 file (e.g. from YouTube / Spotify / personal files).
+2. Rename it or place it right here in this `assets/audio/` folder:
+   - For Aaj Se Teri: `assets/audio/aaj-se-teri.mp3`
+   - For Punjabi Wedding Song: `assets/audio/punjabi-wedding-song.mp3`
+   - Or any name you like: `my-favourite-song.mp3`
+
+3. Open `config.js` in the main folder and update the playlist array:
+
+   music: {
+       playlist: [
+           {
+               title: "Aaj Se Teri",
+               artist: "Arijit Singh",
+               src: "assets/audio/aaj-se-teri.mp3"
+           },
+           {
+               title: "Punjabi Wedding Song",
+               artist: "Sunidhi Chauhan & Benny Dayal",
+               src: "assets/audio/punjabi-wedding-song.mp3"
+           },
+           {
+               title: "Din Shagna Da (Flute Romance)",
+               artist: "Traditional Instrumental",
+               src: "assets/audio/romantic-wedding.wav"
+           },
+           {
+               title: "Sangeet Dhol Celebration",
+               artist: "Festive Beats",
+               src: "assets/audio/festive-sangeet.wav"
+           }
+       ]
+   }
+
+4. Save `config.js` and refresh your browser! That's it!
+========================================================================

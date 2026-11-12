@@ -1,0 +1,479 @@
+/* ==========================================================================
+   VIAH - LUXURY WEDDING WEBSITE & E-CARD STYLES
+   ========================================================================== */
+
+:root {
+    --color-maroon: #4a0e17;
+    --color-burgundy: #6b1724;
+    --color-ruby: #881337;
+    --color-gold-light: #fef08a;
+    --color-gold: #d4af37;
+    --color-gold-dark: #996515;
+    --color-ivory: #faf7f2;
+    --color-cream: #f4ece1;
+    --color-dark: #1c1917;
+    --font-heading: 'Cinzel', serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-script: 'Great Vibes', cursive;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-ivory);
+    color: var(--color-dark);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1e9dd;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-dark);
+}
+
+/* Typography Helpers */
+.font-heading { font-family: var(--font-heading); }
+.font-serif { font-family: var(--font-serif); }
+.font-script { font-family: var(--font-script); }
+
+/* Luxury Metallic Gold Gradients */
+.text-gold-gradient {
+    background: linear-gradient(135deg, #ffe082 0%, #d4af37 40%, #aa771c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light {
+    background: linear-gradient(135deg, #fff3c4 0%, #ecd078 60%, #c8963e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+    background: linear-gradient(135deg, #d4af37 0%, #e6ca65 50%, #b8860b 100%);
+}
+
+.bg-royal-gradient {
+    background: linear-gradient(135deg, #3b0910 0%, #5c121d 50%, #290408 100%);
+}
+
+.border-gold {
+    border-color: #d4af37;
+}
+
+/* Royal Pattern Backgrounds */
+.bg-mandala-pattern {
+    background-color: #4a0e17;
+    background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #4a0e17 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    background-opacity: 0.15;
+}
+
+.bg-damask-subtle {
+    background-color: #faf7f2;
+    background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Shimmer & Glow Effects */
+.gold-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+.gold-shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 240, 160, 0.3) 50%,
+        rgba(255, 255, 255, 0) 80%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* --------------------------------------------------------------------------
+   PETAL CANVAS OVERLAY
+   -------------------------------------------------------------------------- */
+#petals-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 40;
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE ROYAL ENVELOPE / OPENING SCREEN
+   -------------------------------------------------------------------------- */
+#envelope-screen {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #55111b 0%, #240509 100%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+    padding: 20px;
+}
+
+#envelope-screen.opened {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.envelope-wrapper {
+    position: relative;
+    width: min(440px, 92vw);
+    height: min(320px, 66vw);
+    perspective: 1200px;
+    cursor: pointer;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+}
+
+.envelope-base {
+    position: absolute;
+    inset: 0;
+    background: #6b1724;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    overflow: hidden;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Flaps & Shapes */
+.envelope-flap-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(180deg, #781928 0%, #54101b 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 5;
+    border-top: 1px solid #d4af37;
+}
+
+.envelope-wrapper.opening .envelope-flap-top {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope-pockets {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.envelope-pocket-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(90deg, #5b131e 0%, #681623 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.envelope-pocket-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(-90deg, #5b131e 0%, #681623 100%);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.envelope-pocket-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 62%;
+    background: linear-gradient(0deg, #4d0e19 0%, #641522 100%);
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    border-bottom: 2px solid #d4af37;
+}
+
+/* The invitation letter card tucked inside */
+.envelope-letter {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    background: #faf7f2;
+    border: 1.5px solid #d4af37;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.envelope-wrapper.opening .envelope-letter {
+    transform: translateY(-80px);
+}
+
+/* Wax Seal Button */
+.wax-seal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffd56b, #c49429 60%, #7d590e 100%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.6);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffe89e;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+    animation: seal-pulse 2.5s infinite;
+}
+
+.wax-seal:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 35px rgba(212, 175, 55, 0.9);
+}
+
+@keyframes seal-pulse {
+    0%, 100% { box-shadow: 0 6px 16px rgba(0,0,0,0.4), 0 0 15px rgba(212,175,55,0.4); }
+    50% { box-shadow: 0 8px 22px rgba(0,0,0,0.5), 0 0 30px rgba(212,175,55,0.8); }
+}
+
+/* --------------------------------------------------------------------------
+   FLOATING MUSIC PLAYER WIDGET
+   -------------------------------------------------------------------------- */
+.music-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(42, 8, 14, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(212, 175, 55, 0.6);
+    border-radius: 50px;
+    padding: 6px 14px 6px 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(212, 175, 55, 0.2);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+}
+
+.music-widget:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.9);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+/* Rotating Vinyl Disc */
+.vinyl-disc {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #d4af37 20%, #111 25%, #222 65%, #d4af37 70%, #111 75%);
+    border: 2px solid #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    animation: spin-vinyl 4s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-widget.playing .vinyl-disc {
+    animation-play-state: running;
+}
+
+@keyframes spin-vinyl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Sound Wave Bars */
+.sound-bars {
+    display: flex;
+    align-items: center;
+    gap: 2.5px;
+    height: 16px;
+}
+
+.sound-bar {
+    width: 2.5px;
+    background: #d4af37;
+    border-radius: 2px;
+    height: 4px;
+    transition: height 0.2s;
+}
+
+.music-widget.playing .sound-bar:nth-child(1) { animation: wave 1s infinite 0.1s; }
+.music-widget.playing .sound-bar:nth-child(2) { animation: wave 0.8s infinite 0.3s; }
+.music-widget.playing .sound-bar:nth-child(3) { animation: wave 1.2s infinite 0.2s; }
+.music-widget.playing .sound-bar:nth-child(4) { animation: wave 0.9s infinite 0.4s; }
+
+@keyframes wave {
+    0%, 100% { height: 4px; }
+    50% { height: 16px; }
+}
+
+/* Playlist Dropdown */
+.playlist-drawer {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 310px;
+    background: rgba(30, 6, 10, 0.96);
+    backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(212, 175, 55, 0.6);
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 60;
+}
+
+.playlist-drawer.open {
+    display: flex;
+    animation: slideUpFade 0.25s ease-out;
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   COUNTDOWN TIMER CARDS
+   -------------------------------------------------------------------------- */
+.countdown-box {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid #d4af37;
+    border-radius: 14px;
+    padding: 14px 10px;
+    min-width: 74px;
+    text-align: center;
+    box-shadow: 0 8px 20px -4px rgba(74, 14, 23, 0.12), 0 0 12px rgba(212, 175, 55, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #ffe082, #d4af37);
+}
+
+/* --------------------------------------------------------------------------
+   EVENT CARDS
+   -------------------------------------------------------------------------- */
+.event-card {
+    background: #ffffff;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.8);
+    box-shadow: 0 20px 35px -8px rgba(74, 14, 23, 0.15), 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   STORY TIMELINE
+   -------------------------------------------------------------------------- */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.8) 50%, rgba(212, 175, 55, 0.1) 100%);
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 24px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   PHOTO GALLERY HOVER
+   -------------------------------------------------------------------------- */
+.gallery-img-wrapper {
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1.5px solid rgba(212, 175, 55, 0.4);
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-img-wrapper img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-img-wrapper:hover img {
+    transform: scale(1.08);
+}
