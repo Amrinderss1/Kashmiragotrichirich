@@ -36,9 +36,9 @@ function populateWeddingData(config) {
     if (!config.couple) return;
 
     // Couple Names & Monograms
-    document.querySelectorAll('.data-bride-name').forEach(el => el.textContent = config.couple.bride.firstName);
-    document.querySelectorAll('.data-groom-name').forEach(el => el.textContent = config.couple.groom.firstName);
-    document.querySelectorAll('.data-couple-names').forEach(el => el.textContent = `${config.couple.bride.firstName} & ${config.couple.groom.firstName}`);
+    document.querySelectorAll('.data-bride-name').forEach(el => el.textContent = config.couple.bride.fullName);
+    document.querySelectorAll('.data-groom-name').forEach(el => el.textContent = config.couple.groom.fullName);
+    document.querySelectorAll('.data-couple-names').forEach(el => el.textContent = `${config.couple.bride.fullName} & ${config.couple.groom.fullName}`);
     document.querySelectorAll('.data-couple-full-names').forEach(el => el.textContent = `${config.couple.bride.fullName} & ${config.couple.groom.fullName}`);
     document.querySelectorAll('.data-monogram').forEach(el => el.textContent = config.couple.monogram);
     document.querySelectorAll('.data-hashtag').forEach(el => el.textContent = config.couple.weddingHashtag);
@@ -161,12 +161,6 @@ function renderEvents(events) {
                                     <p class="font-bold text-stone-900">${ev.venue} (${ev.hall})</p>
                                     <p class="text-xs text-stone-500">${ev.address}</p>
                                 </div>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-800 border border-amber-200 shrink-0">👗</span>
-                                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
-                                    Dress Code: ${ev.dressCode}
-                                </span>
                             </div>
                         </div>
 

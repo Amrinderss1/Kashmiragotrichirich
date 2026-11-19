@@ -27,7 +27,7 @@ window.WEDDING_CONFIG = {
             bio: "Gentle, charming, and devoted, ready to embark on this sacred journey of love and partnership."
         },
         monogram: "K & R",
-        weddingHashtag: "#KashmiraWedsRichi",
+        weddingHashtag: "#KashmiraGotRichiRich",
         quote: "Two hearts, two families, united by destiny and blessed by love."
     },
 
@@ -108,7 +108,6 @@ window.WEDDING_CONFIG = {
             hall: "Florence Hall",
             venue: "SK KLYDE GRAND",
             address: "31/7, Pacific Business Park, Sahibabad Industrial Area Site 4, Sahibabad, UP – 201010",
-            dressCode: "Festive Glam / Cocktail Indo-Western",
             colorAccent: "#831843",
             image: "assets/images/mehendi.jpg",
             scheduleTimeline: [
@@ -129,7 +128,6 @@ window.WEDDING_CONFIG = {
             hall: "Coral Hall",
             venue: "SK KLYDE GRAND",
             address: "31/7, Pacific Business Park, Sahibabad Industrial Area Site 4, Sahibabad, UP – 201010",
-            dressCode: "Haldi Yellow & Floral Splendor",
             colorAccent: "#D97706",
             image: "assets/images/haldi.jpg",
             scheduleTimeline: [
@@ -143,26 +141,25 @@ window.WEDDING_CONFIG = {
         {
             id: "wedding",
             title: "Shubh Vivah (The Wedding Ceremony)",
-            tagline: "Varmala, sacred seven vows around holy fire, dinner & Vidai in Taaro ki Chao me",
+            tagline: "Varmala, sacred seven vows around holy fire, dinner & Phere in Taaro ki Chao me",
             date: "Saturday, 23rd January 2027",
             time: "7:00 PM onwards",
             hall: "Sapphire Hall",
             venue: "SK KLYDE GRAND",
             address: "31/7, Pacific Business Park, Sahibabad Industrial Area Site 4, Sahibabad, UP – 201010",
-            dressCode: "Traditional Royal Indian Attire",
             colorAccent: "#991B1B",
             image: "assets/images/wedding.jpg",
-            specialHighlight: "✨ “Then Vidai in Taaro ki Chao me” ✨",
+            specialHighlight: "✨ “Then Phere in Taaro ki Chao me” ✨",
             scheduleTimeline: [
                 { time: "7:00 PM", text: "Guest Welcome & Gathering" },
                 { time: "8:00 PM", text: "Grand Arrival of Baraat" },
                 { time: "8:30 PM", text: "Varmala Ceremony" },
                 { time: "9:00 PM", text: "Royal Wedding Dinner" },
                 { time: "10:30 PM", text: "Sacred Vedic Phere & Hastamelap" },
-                { time: "Late Night", text: "Vidai in Taaro ki Chao me 🌙" }
+                { time: "Late Night", text: "Phere in Taaro ki Chao me 🌙" }
             ],
             mapUrl: "https://maps.google.com/?q=SK+KLYDE+GRAND,+31/7,+Pacific+Business+Park,+Sahibabad+Industrial+Area+Site+4,+Sahibabad,+UP+201010",
-            googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kashmira+%26+Richi+-+Wedding+Ceremony+(Shubh+Vivah)&dates=20270123T133000Z/20270123T203000Z&details=Wedding+Ceremony+at+Sapphire+Hall,+SK+KLYDE+GRAND.+Baraat+8PM,+Dinner+9PM,+Vidai+in+Taaro+ki+Chao+me&location=SK+KLYDE+GRAND+Sahibabad"
+            googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kashmira+%26+Richi+-+Wedding+Ceremony+(Shubh+Vivah)&dates=20270123T133000Z/20270123T203000Z&details=Wedding+Ceremony+at+Sapphire+Hall,+SK+KLYDE+GRAND.+Baraat+8PM,+Dinner+9PM,+Phere+in+Taaro+ki+Chao+me&location=SK+KLYDE+GRAND+Sahibabad"
         }
     ],
 
