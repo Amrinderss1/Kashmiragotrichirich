@@ -109,7 +109,7 @@ window.WEDDING_CONFIG = {
             venue: "SK KLYDE GRAND",
             address: "31/7, Pacific Business Park, Sahibabad Industrial Area Site 4, Sahibabad, UP – 201010",
             colorAccent: "#831843",
-            image: "assets/images/mehendi.jpg",
+            image: "assets/images/ceremony-mehndi.jpg?v=3",
             scheduleTimeline: [
                 { time: "6:00 PM", text: "Welcome & High Tea" },
                 { time: "7:00 PM", text: "Ring Exchange & Mehndi Adornment" },
@@ -129,7 +129,7 @@ window.WEDDING_CONFIG = {
             venue: "SK KLYDE GRAND",
             address: "31/7, Pacific Business Park, Sahibabad Industrial Area Site 4, Sahibabad, UP – 201010",
             colorAccent: "#D97706",
-            image: "assets/images/haldi.jpg",
+            image: "assets/images/ceremony-haldi.jpg?v=3",
             scheduleTimeline: [
                 { time: "11:30 AM", text: "Haldi Utsav Begins" },
                 { time: "12:30 PM", text: "Floral Phoolon Ki Holi & Geet" },
@@ -148,7 +148,7 @@ window.WEDDING_CONFIG = {
             venue: "SK KLYDE GRAND",
             address: "31/7, Pacific Business Park, Sahibabad Industrial Area Site 4, Sahibabad, UP – 201010",
             colorAccent: "#991B1B",
-            image: "assets/images/wedding.jpg",
+            image: "assets/images/ceremony-wedding.jpg?v=3",
             specialHighlight: "✨ “Then Phere in Taaro ki Chao me” ✨",
             scheduleTimeline: [
                 { time: "7:00 PM", text: "Guest Welcome & Gathering" },
