@@ -121,7 +121,7 @@ function renderEvents(events) {
             <div class="event-card relative flex flex-col md:flex-row items-stretch bg-white rounded-3xl overflow-hidden border border-amber-200/70 shadow-lg">
                 <!-- Event Image Banner -->
                 <div class="md:w-5/12 relative h-60 md:h-auto min-h-[260px] overflow-hidden">
-                    <img src="${ev.image}" alt="${ev.title}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.src='assets/images/wedding.jpg'" />
+                    <img src="${ev.image}" alt="${ev.title}" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" onerror="this.src='assets/images/wedding.jpg'" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:hidden"></div>
                     <div class="absolute top-4 left-4 bg-amber-900/90 text-amber-200 text-xs font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-amber-400/40 backdrop-blur-md">
                         Event ${index + 1}
