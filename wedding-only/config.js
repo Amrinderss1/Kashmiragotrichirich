@@ -61,7 +61,7 @@ window.WEDDING_CONFIG = {
     },
 
     // ----------------------------------------------------------------------
-    // 4. MUSIC PLAYLIST
+    // 4. MUSIC PLAYLIST ("Aaj Se Teri" as featured wedding soundtrack)
     // ----------------------------------------------------------------------
     music: {
         autoplayOnOpen: true,
@@ -69,27 +69,11 @@ window.WEDDING_CONFIG = {
         playlist: [
             {
                 id: "track-1",
-                title: "Din Shagna Da",
-                artist: "Phillauri • Jasleen Royal",
-                src: "assets/audio/din-shagna-da.m4a",
-                fallbackSrc: "assets/audio/romantic-wedding.wav",
-                badge: "Bridal Entry Special"
-            },
-            {
-                id: "track-2",
                 title: "Aaj Se Teri",
                 artist: "Padman • Arijit Singh",
                 src: "assets/audio/aaj-se-teri.m4a",
                 fallbackSrc: "assets/audio/romantic-wedding.wav",
                 badge: "Soulful Romance"
-            },
-            {
-                id: "track-3",
-                title: "Punjabi Wedding Song",
-                artist: "Hasee Toh Phasee • Sunidhi Chauhan",
-                src: "assets/audio/punjabi-wedding-song.m4a",
-                fallbackSrc: "assets/audio/festive-sangeet.wav",
-                badge: "Celebration Dance"
             }
         ]
     },

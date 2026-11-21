@@ -315,7 +315,12 @@ function initAudioController(musicConfig) {
     }
 
     audioEl.addEventListener('ended', () => {
-        next();
+        if (playlist.length <= 1) {
+            audioEl.currentTime = 0;
+            audioEl.play().catch(e => console.log(e));
+        } else {
+            next();
+        }
     });
 
     function renderPlaylistDrawer() {
@@ -351,10 +356,14 @@ function initAudioController(musicConfig) {
 
     const nextBtn = document.getElementById('music-next-btn');
     if (nextBtn) {
-        nextBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            next();
-        });
+        if (playlist.length <= 1) {
+            nextBtn.style.display = 'none';
+        } else {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                next();
+            });
+        }
     }
 
     if (playlistBtn && playlistDrawer) {

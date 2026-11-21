@@ -62,7 +62,7 @@ window.WEDDING_CONFIG = {
     },
 
     // ----------------------------------------------------------------------
-    // 4. MUSIC PLAYLIST (Din Shagna Da first, then Aaj Se Teri, Punjabi Wedding Song)
+    // 4. MUSIC PLAYLIST ("Aaj Se Teri" as featured wedding soundtrack)
     // ----------------------------------------------------------------------
     music: {
         autoplayOnOpen: true,
@@ -70,27 +70,11 @@ window.WEDDING_CONFIG = {
         playlist: [
             {
                 id: "track-1",
-                title: "Din Shagna Da",
-                artist: "Phillauri • Jasleen Royal",
-                src: "assets/audio/din-shagna-da.m4a",
-                fallbackSrc: "assets/audio/romantic-wedding.wav",
-                badge: "Bridal Entry Special"
-            },
-            {
-                id: "track-2",
                 title: "Aaj Se Teri",
                 artist: "Padman • Arijit Singh",
                 src: "assets/audio/aaj-se-teri.m4a",
                 fallbackSrc: "assets/audio/romantic-wedding.wav",
                 badge: "Soulful Romance"
-            },
-            {
-                id: "track-3",
-                title: "Punjabi Wedding Song",
-                artist: "Hasee Toh Phasee • Sunidhi Chauhan",
-                src: "assets/audio/punjabi-wedding-song.m4a",
-                fallbackSrc: "assets/audio/festive-sangeet.wav",
-                badge: "Celebration Dance"
             }
         ]
     },
@@ -131,8 +115,7 @@ window.WEDDING_CONFIG = {
             colorAccent: "#D97706",
             image: "assets/images/ceremony-haldi.jpg?v=3",
             scheduleTimeline: [
-                { time: "11:30 AM", text: "Haldi Utsav Begins" },
-                { time: "12:30 PM", text: "Floral Phoolon Ki Holi & Geet" }
+                { time: "11:30 AM", text: "Haldi Utsav Begins followed by lunch" }
             ],
             mapUrl: "https://maps.google.com/?q=SK+KLYDE+GRAND,+31/7,+Pacific+Business+Park,+Sahibabad+Industrial+Area+Site+4,+Sahibabad,+UP+201010",
             googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kashmira+Mathur+-+Haldi+Ceremony&dates=20270123T060000Z/20270123T090000Z&details=Haldi+Ceremony+at+Coral+Hall,+SK+KLYDE+GRAND&location=SK+KLYDE+GRAND+Sahibabad"
