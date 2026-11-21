@@ -124,7 +124,7 @@ window.WEDDING_CONFIG = {
             title: "Haldi Ceremony of Kashmira Mathur",
             tagline: "Auspicious turmeric blessings, floral splashes, laughter, and joy",
             date: "Saturday, 23rd January 2027",
-            time: "11:30 AM onwards (Followed by Lunch from 1:30 PM)",
+            time: "11:30 AM onwards",
             hall: "Coral Hall",
             venue: "SK KLYDE GRAND",
             address: "31/7, Pacific Business Park, Sahibabad Industrial Area Site 4, Sahibabad, UP – 201010",
@@ -132,11 +132,10 @@ window.WEDDING_CONFIG = {
             image: "assets/images/ceremony-haldi.jpg?v=3",
             scheduleTimeline: [
                 { time: "11:30 AM", text: "Haldi Utsav Begins" },
-                { time: "12:30 PM", text: "Floral Phoolon Ki Holi & Geet" },
-                { time: "1:30 PM", text: "Traditional Festive Lunch" }
+                { time: "12:30 PM", text: "Floral Phoolon Ki Holi & Geet" }
             ],
             mapUrl: "https://maps.google.com/?q=SK+KLYDE+GRAND,+31/7,+Pacific+Business+Park,+Sahibabad+Industrial+Area+Site+4,+Sahibabad,+UP+201010",
-            googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kashmira+Mathur+-+Haldi+Ceremony&dates=20270123T060000Z/20270123T090000Z&details=Haldi+Ceremony+at+Coral+Hall,+SK+KLYDE+GRAND+followed+by+Lunch&location=SK+KLYDE+GRAND+Sahibabad"
+            googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kashmira+Mathur+-+Haldi+Ceremony&dates=20270123T060000Z/20270123T090000Z&details=Haldi+Ceremony+at+Coral+Hall,+SK+KLYDE+GRAND&location=SK+KLYDE+GRAND+Sahibabad"
         },
         {
             id: "wedding",

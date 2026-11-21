@@ -94,13 +94,13 @@ function renderEvents(events) {
         let timelineHtml = '';
         if (ev.scheduleTimeline && ev.scheduleTimeline.length > 0) {
             timelineHtml = `
-                <div class="mt-4 mb-2 p-3 bg-amber-50/80 rounded-2xl border border-amber-200/80">
-                    <p class="text-[11px] font-bold text-amber-900 uppercase tracking-wider mb-2">Program Flow:</p>
-                    <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="mt-4 mb-2 p-3.5 bg-amber-50/80 rounded-2xl border border-amber-200/80">
+                    <p class="text-[11px] font-bold text-amber-900 uppercase tracking-wider mb-2.5">Program Flow:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                         ${ev.scheduleTimeline.map(item => `
-                            <div class="flex items-center gap-1.5 text-stone-700">
-                                <span class="font-bold text-amber-800 shrink-0">• ${item.time}:</span>
-                                <span class="truncate">${item.text}</span>
+                            <div class="flex items-start gap-2 text-stone-700">
+                                <span class="font-bold text-amber-800 shrink-0 whitespace-nowrap">• ${item.time}:</span>
+                                <span class="text-stone-800 leading-snug">${item.text}</span>
                             </div>
                         `).join('')}
                     </div>
@@ -147,19 +147,19 @@ function renderEvents(events) {
                         ${highlightHtml}
 
                         <div class="space-y-2 text-sm text-stone-700 mb-3">
-                            <div class="flex items-center gap-3">
-                                <span class="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-800 border border-amber-200 shrink-0">📅</span>
-                                <span class="font-semibold text-stone-900">${ev.date}</span>
+                            <div class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-800 border border-amber-200 shrink-0 mt-0.5">📅</span>
+                                <span class="font-semibold text-stone-900 leading-snug">${ev.date}</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-800 border border-amber-200 shrink-0">⏰</span>
-                                <span class="font-semibold text-stone-900">${ev.time}</span>
+                            <div class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-800 border border-amber-200 shrink-0 mt-0.5">⏰</span>
+                                <span class="font-semibold text-stone-900 leading-snug">${ev.time}</span>
                             </div>
                             <div class="flex items-start gap-3">
                                 <span class="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-800 border border-amber-200 shrink-0 mt-0.5">📍</span>
                                 <div>
-                                    <p class="font-bold text-stone-900">${ev.venue} (${ev.hall})</p>
-                                    <p class="text-xs text-stone-500">${ev.address}</p>
+                                    <p class="font-bold text-stone-900 leading-snug">${ev.venue} (${ev.hall})</p>
+                                    <p class="text-xs text-stone-500 mt-0.5">${ev.address}</p>
                                 </div>
                             </div>
                         </div>
